@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap");
+
+@import "tailwindcss";
+
+/* DESIGN TOKENS */
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "Space Mono", monospace;
+
+  --color-background: #282B30;
+  --color-foreground: #E4E0D8;
+  --color-accent: #E4E0D8;
+
+  --color-surface: #1c1c1c;
+  --color-muted: #a3a3a3;
+  --color-line: #404040;
+}
+
+/* GLOBAL STYLES */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply m-0 bg-background text-foreground font-display antialiased;
+}
+
+#root {
+  @apply min-h-screen w-full;
+}
+
+::selection {
+  @apply bg-foreground text-background;
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+
+/* HERO — NAMED GRID AREAS */
+
+/* Mobile first */
+
+.hero-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  grid-template-areas:
+    "intro"
+    "navigation";
+
+  align-content: space-between;
+
+  gap: 5rem;
+
+  /*  mobile circle */
+
+  --circle-radius: 100vw;
+  --circle-x: 116%;
+  --circle-y: 97%;
+}
+
+.hero-intro {
+  grid-area: intro;
+  min-width: 0;
+}
+
+.hero-navigation {
+  grid-area: navigation;
+  justify-self: end;
+}
+
+/* Shared circle mask */
+
+.hero-mask {
+  clip-path: circle(
+    var(--circle-radius)
+    at var(--circle-x) var(--circle-y)
+  );
+}
+
+/* SMALL TABLET */
+
+@media (min-width: 640px) {
+  .hero-grid {
+    gap: 4rem;
+
+    --circle-radius: 80vw;
+    --circle-x: 115%;
+    --circle-y: 100%;
+  }
+}
+
+/* TABLET */
+
+@media (min-width: 768px) {
+  .hero-grid {
+    align-content: center;
+    gap: 5rem;
+
+    --circle-radius: 70vw;
+    --circle-x: 115%;
+    --circle-y: 85%;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns:
+      minmax(0, 78%)
+      minmax(0, 22%);
+
+    grid-template-areas: "intro navigation";
+
+    align-items: center;
+    align-content: center;
+    gap: 0;
+
+    --circle-radius: 55vw;
+    --circle-x: 119%;
+    --circle-y: 36%;
+  }
+
+  .hero-navigation {
+    grid-area: auto;
+    position: absolute;
+
+    top: 26%;
+    right: 7vw;
+    left: auto;
+
+    justify-self: auto;
+    align-self: auto;
+  }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
