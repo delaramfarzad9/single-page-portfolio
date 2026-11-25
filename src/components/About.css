@@ -1,0 +1,125 @@
+
+/* About layout */
+
+.about-grid {
+  display: grid;
+
+  grid-template-columns: minmax(0, 1fr);
+
+  grid-template-areas:
+    "intro"
+    "profile";
+
+  gap: 3rem;
+}
+
+.about-intro {
+  grid-area: intro;
+}
+
+.developer-profile {
+  grid-area: profile;
+}
+
+
+/* Editorial typography */
+
+.about-heading {
+  font-size: clamp(2.5rem, 9vw, 4.5rem);
+  line-height: 1.05;
+}
+
+.about-design {
+  margin-left: 8%;
+
+  color: transparent;
+  -webkit-text-stroke: 1px var(--color-foreground);
+}
+
+.about-build {
+  margin-left: 24%;
+}
+
+
+/* Architectural decoration */
+
+.about-blueprint {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  opacity: 0.12;
+}
+
+.blueprint-circle {
+  position: absolute;
+
+  width: 65%;
+  aspect-ratio: 1;
+
+  border: 1px solid var(--color-foreground);
+  border-radius: 50%;
+}
+
+.circle-one {
+  top: 0;
+  left: 2%;
+}
+
+.circle-two {
+  top: 0;
+  left: 28%;
+}
+
+
+/* Architectural construction lines */
+
+.blueprint-horizontal {
+  position: absolute;
+
+  top: 35%;
+  left: 0;
+  width: 100%;
+
+  border-top: 1px dashed var(--color-foreground);
+}
+
+.blueprint-vertical {
+  position: absolute;
+
+  top: 0;
+  left: 47%;
+  height: 85%;
+
+  border-left: 1px dashed var(--color-foreground);
+}
+
+
+/* Desktop layout */
+
+@media (min-width: 1024px) {
+  .about-grid {
+    grid-template-columns:
+      minmax(0, 1fr)
+      minmax(0, 1fr);
+
+    grid-template-areas: "intro profile";
+
+    align-items: center;
+    gap: 5vw;
+  }
+
+  .about-heading {
+    font-size: clamp(3.5rem, 5.5vw, 6rem);
+  }
+
+  .about-design {
+    margin-left: 12%;
+  }
+
+  .about-build {
+    margin-left: 30%;
+  }
+}

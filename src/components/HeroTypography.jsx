@@ -3,6 +3,7 @@ function HeroTypography({ overlay = false }) {
 
   return (
     <div className="font-display uppercase">
+
       <Heading
         className="
           text-[21vw]
@@ -19,20 +20,26 @@ function HeroTypography({ overlay = false }) {
 
       <p
         className="
-          mt-8 sm:mt-10 lg:mt-[5.5vw]
+          mt-8 sm:mt-10 lg:mt-[9vw]
           font-medium
-          leading-[1.1]  lg:leading-[1.4]
+          leading-[1.1] lg:leading-[1.2]
           tracking-[-0.05em]
         "
       >
         <span
-          className="
+          className={`
             block whitespace-nowrap
             text-[11vw]
             sm:text-[10vw]
             md:text-[9vw]
             lg:text-[8.5vw]
-          "
+            text-transparent
+            ${
+              overlay
+                ? "[-webkit-text-stroke:1.5px_var(--color-background)]"
+                : "[-webkit-text-stroke:1.5px_var(--color-foreground)]"
+            }
+          `}
         >
           FRONT-END
         </span>
@@ -53,6 +60,7 @@ function HeroTypography({ overlay = false }) {
           DEVELOPER
         </span>
       </p>
+
     </div>
   );
 }

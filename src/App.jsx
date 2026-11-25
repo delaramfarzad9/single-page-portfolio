@@ -1,4 +1,6 @@
 import Hero from "./components/Hero";
+import Projects from "./components/Projects";
+import About from "./components/About";
 import Footer from "./components/Footer";
 
 function App() {
@@ -6,10 +8,8 @@ function App() {
     <>
       <main>
         <Hero />
-
-        {/* Projects will go here */}
-
-        {/* About will go here */}
+        <Projects />
+        <About />
       </main>
 
       <Footer />

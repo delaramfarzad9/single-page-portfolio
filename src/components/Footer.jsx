@@ -1,92 +1,53 @@
 import SocialLink from "./SocialLink";
 import BackToTop from "./BackToTop";
 import socialLinks from "../assets/data/socialLinks";
+import "./Footer.css";
 
 function Footer() {
   return (
-    <footer
-      id="contact"
-      className="
-        bg-foreground text-background
-        px-[7vw]
-        py-16 sm:py-20 lg:py-24
-      "
-    >
-      {/* Editorial heading */}
+    <footer id="contact" className="footer-grid">
 
-      <h2
-        className="
-          font-display uppercase
-          leading-[0.95]
-          tracking-[-0.05em]
-        "
-      >
-        <span
-          className="
-            block font-bold
-            text-[17vw]
-            sm:text-[14vw]
-            lg:text-[8.5vw]
-          "
-        >
-          LET'S
-        </span>
+      {/* Heading */}
+      <div className="footer-heading">
+        <h2 className="font-display uppercase tracking-[-0.05em] leading-tight">
 
-        <span
-          className="
-            block font-medium
-            text-[14vw]
-            sm:text-[13vw]
-            lg:text-[8vw]
-            ml-[2vw]
-            sm:ml-[8vw]
-            lg:ml-[7vw]
-            mt-3 lg:mt-6
-          "
-        >
-          CONNECT.
-        </span>
-      </h2>
+          <span className="block font-bold">
+            LET'S
+          </span>
+
+          <span className="block font-medium ml-[5.5vw]">
+            CONNECT.
+          </span>
+
+        </h2>
+      </div>
 
       {/* Social links */}
-
-      <div
-        className="
-          mt-12 sm:mt-16 lg:mt-24
-          border-b border-background/40
-        "
+      <nav
+        className="footer-links"
+        aria-label="Social links"
       >
         {socialLinks.map((link) => (
           <SocialLink
             key={link.id}
-            id={link.id}
             label={link.label}
             href={link.href}
+            download={link.download}
           />
         ))}
-      </div>
+      </nav>
 
       {/* Footer information */}
+      <div className="footer-info font-mono uppercase">
+        <BackToTop />
 
-      <div
-        className="
-          flex flex-col gap-6
-          pt-8 lg:pt-12
-          md:flex-row
-          md:items-center
-          md:justify-between
-          font-mono text-xs uppercase
-        "
-      >
-        <p className="leading-relaxed">
+        <p>
           Designed & Developed by Delaram Farzad
 
-          <span className="block mt-2">
+          <span className="block mt-1">
             © {new Date().getFullYear()}
           </span>
         </p>
-
-        <BackToTop />
       </div>
     </footer>
   );
