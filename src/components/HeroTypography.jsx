@@ -6,10 +6,7 @@ function HeroTypography({ overlay = false }) {
 
       <Heading
         className="
-          text-[21vw]
-          sm:text-[18vw]
-          md:text-[15vw]
-          lg:text-[11.5vw]
+          hero-name
           font-bold
           leading-[0.8]
           tracking-[-0.035em]
@@ -20,19 +17,15 @@ function HeroTypography({ overlay = false }) {
 
       <p
         className="
-          mt-8 sm:mt-10 lg:mt-[9vw]
+          hero-role
           font-medium
-          leading-[1.1] lg:leading-[1.2]
           tracking-[-0.05em]
         "
       >
         <span
           className={`
+            hero-frontend
             block whitespace-nowrap
-            text-[11vw]
-            sm:text-[10vw]
-            md:text-[9vw]
-            lg:text-[8.5vw]
             text-transparent
             ${
               overlay
@@ -46,15 +39,8 @@ function HeroTypography({ overlay = false }) {
 
         <span
           className="
+            hero-developer
             block whitespace-nowrap
-            text-[13vw]
-            sm:text-[12vw]
-            md:text-[11vw]
-            lg:text-[11vw]
-            ml-[2vw]
-            sm:ml-[8vw]
-            md:ml-[15vw]
-            lg:ml-[24vw]
           "
         >
           DEVELOPER

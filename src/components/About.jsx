@@ -7,7 +7,13 @@ function About() {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="bg-background text-foreground px-[7vw] py-16 lg:py-24"
+    className="
+  bg-background text-foreground
+  px-[7vw]
+  pt-6 pb-12
+  md:py-16
+  lg:py-24
+"
     >
       {/* Section label */}
       <div className="flex flex-wrap justify-between gap-3 border-t border-line pt-6 font-mono text-xs uppercase">

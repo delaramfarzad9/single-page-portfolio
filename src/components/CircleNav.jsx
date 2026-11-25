@@ -6,13 +6,10 @@ const links = [
 
 function CircleNav({ decorative = false }) {
   const navClasses = `
-    flex flex-col items-start
-    gap-4 sm:gap-5 lg:gap-[56px]
+    circle-nav
+    flex flex-col
     font-mono font-bold uppercase
     text-background
-    text-[clamp(1rem,4.5vw,1.5rem)]
-    md:text-[2.8vw]
-    lg:text-[2.5vw]
     whitespace-nowrap
     leading-none
   `;

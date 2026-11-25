@@ -6,7 +6,7 @@
 .projects-section {
   background: var(--color-background);
   color: var(--color-foreground);
-  padding: 5rem 7vw;
+  padding: 3rem 7vw 2rem;
 }
 
 .projects-header {
@@ -224,8 +224,11 @@
 /* =========================
    Tablet and desktop
 ========================= */
-
 @media (min-width: 768px) {
+  .projects-section {
+    padding-block: 5rem;
+  }
+
   .projects-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
 
@@ -234,7 +237,6 @@
       "voyavista taskflow";
   }
 }
-
 @media (min-width: 1280px) {
   .projects-grid {
     gap: 2rem;
