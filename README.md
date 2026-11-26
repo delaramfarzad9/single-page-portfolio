@@ -11,6 +11,10 @@ Appverse Technologies.
 
 [View Live Portfolio](https://single-page-portfolio-nu.vercel.app/)
 
+## Project Preview
+
+![Responsive Grid Portfolio Screenshot](./public/screenshot/single-page-portfolio-screenshot.png)
+
 ## Technologies
 
 - React

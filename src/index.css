@@ -109,7 +109,7 @@ a:focus-visible {
 /* Navigation position */
 
 .hero-navigation {
-  grid-area: navigation;
+  grid-area: auto;
 
   position: absolute;
 
@@ -118,7 +118,6 @@ a:focus-visible {
 
   transform: translateX(-50%);
 }
-
 
 /* Navigation typography */
 
